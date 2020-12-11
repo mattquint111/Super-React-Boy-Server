@@ -6,7 +6,8 @@ const models = require('./models')
 app.use(cors())
 app.use(express.json())
 
-const PORT = 8080
+const PORT = process.env.PORT || 8080
+const URL = "https://git.heroku.com/whispering-lowlands-60127.git"
 
 app.get('/test', (req,res) => {
     res.send('Server is working!')
